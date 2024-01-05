@@ -6,7 +6,7 @@ authors = ["Zack Bradshaw <zack@zackbradshaw.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.12"
 aiohttp = "*"
 BingImageCreator = "*"
 certifi = "*"
@@ -15,7 +15,13 @@ prompt_toolkit = "*"
 requests = "*"
 rich = "*"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+ipython = "^8.19.0"
+pytest = "^7.4.4"
+
+[tool.setuptools.packages.find]
+where = ["src/"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
